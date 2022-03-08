@@ -66,7 +66,6 @@ let myNumber = parseInt(myString)
 console.log(myNumber)
 
 
-
 /*
 Task 1d - Multiply
  
@@ -80,9 +79,6 @@ function multiply(a, b){
   return a*b
 }
 
-function dogYears(age){
-  return age * 7
-}
 
 
 
@@ -95,9 +91,8 @@ Do the following:
  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
  3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
 
 
@@ -148,10 +143,29 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age) {
+  if (age >= 1) {
+      if (weight <= 5) {
+          return weight * 0.05
+      } else if (weight >= 6 && weight <= 10) {
+          return weight * 0.04
+      } else if (weight >= 11 && weight <= 15) {
+          return weight * 0.03
+      } else if (weight > 15) {
+          return weight * 0.02
+      }
+  }
+  if (age < 1) {
+    if (age >= 0.16 && age < 0.33 ) {
+      return weight * 0.1
+    } else if (age >= 0.33 && age < 0.58) {
+      return weight * 0.05
+    } else if (age >=0.58 && age < 1) {
+      return weight * 0.04
+    }
+  }
 }
-
+console.log(hungryDog(7, 1))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -206,9 +220,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  let foot = cm / 0.0328
+  return foot
 }
+console.log(feet(20))
 
 
 
@@ -226,8 +242,12 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(startingNumber){
+  return `${startingNumber} bottles of soda on the wall, ${startingNumber} bottles of soda, take one down pass it around ${startingNumber - 1} bottles of soda on the wall`
+}
+
+for (let i=5; i > 0; i--) {
+  console.log(annoyingSong(i))
 }
 
 
@@ -246,10 +266,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
-
+function grade(score){
+  if (score >= 90 && score <=100) {
+    return "you got an A"
+  } else if (score >= 80 && score <=89) {
+    return "you got a B"
+  } else if (score >=70 && score <=79) {
+    return "you got a C"
+  } else if (score >=60 && score<=69) {
+    return "you got a D"
+  } else {
+    return "you got an F"
+  }
+ }
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
