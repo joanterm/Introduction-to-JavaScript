@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18
+if (votingAge >= 18) {
+  console.log(true)
+} else {
+  console.log(false)
+}
 
 
 /*
@@ -33,7 +38,15 @@ Do the following:
 
    HINT: no function required
 */
+let firstThing = 10
+let secondThing = 10
 
+if (firstThing === secondThing) {
+  firstThing = "Same"
+  console.log(firstThing)
+} else {
+  console.log("false")
+}
 
 
 
@@ -48,7 +61,9 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let myString = "1999"
+let myNumber = parseInt(myString)
+console.log(myNumber)
 
 
 
@@ -61,8 +76,12 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a*b
+}
+
+function dogYears(age){
+  return age * 7
 }
 
 
