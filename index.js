@@ -189,8 +189,36 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+const getCompChoice = () => {
+  const computerChoice = (Math.floor(Math.random() * 3))
+if (computerChoice === 0) {
+  return "rock"
+} else if (computerChoice === 1) {
+  return "paper"
+} else {
+  return "scissors"
+}
+}
+
 function game(user, computer){
-  /*add your code here*/
+  if (user === "rock") {
+    if (computer === "paper") {
+      return "you lose!"
+    } else if (computer === "scissors") {
+      return "you win!"
+    } else {
+      return "it's a tie"
+    }
+  }
+  if (computer === "rock") {
+    if (user === "paper") {
+      return "you win!"
+    } else if (user === "scissors") {
+      return "you lose!"
+    } else {
+      return "it's a tie"
+    }
+  }
 }
 
 
@@ -206,10 +234,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  let mile = kilometers / 1.609
+  return mile
 }
-
+console.log(miles(10))
 
 
 //Task 5b - Feet to CM
