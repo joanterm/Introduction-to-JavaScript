@@ -210,15 +210,33 @@ function game(user, computer){
       return "it's a tie"
     }
   }
-  if (computer === "rock") {
-    if (user === "paper") {
-      return "you win!"
-    } else if (user === "scissors") {
+  if (user === "paper") {
+    if (computer === "scissors") {
       return "you lose!"
+    } else if (computer === "rock") {
+      return "you win!"
     } else {
       return "it's a tie"
     }
   }
+  if (user === "scissors") {
+    if (computer === "rock") {
+      return "you lose!"
+    } else if (computer === "paper") {
+      return "you win!"
+    } else {
+      return "it's a tie"
+    }
+  }
+  // if (computer === "rock") {
+  //   if (user === "paper") {
+  //     return "you win!"
+  //   } else if (user === "scissors") {
+  //     return "you lose!"
+  //   } else {
+  //     return "it's a tie"
+  //   }
+  // }
 }
 
 
@@ -235,10 +253,10 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  let mile = kilometers / 1.609
+  let mile = kilometers * 0.621371
   return mile
 }
-console.log(miles(10))
+console.log(miles(5))
 
 
 //Task 5b - Feet to CM
@@ -250,7 +268,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-  let foot = cm / 0.0328
+  let foot = cm / 30.48
   return foot
 }
 console.log(feet(20))
